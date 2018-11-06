@@ -220,7 +220,7 @@ class TestWriteAvg(unittest.TestCase):
             for line in out_reader:
                 out_file_content.append(line[0] + ", " + line[1])
         
-        msg = "ell {} != contents written to out_file, {}".format(ell, expected0)
+        msg = "Given ell {}, contents you wrote: {} != expected contents, {}".format(ell, out_file_content, expected0)
         result = (out_file_content == expected0) or (out_file_content == expected1)
         self.assertTrue(result, msg)
 
